@@ -1,31 +1,39 @@
-# MK Camera Overlays 1.0
+MK Camera Overlay Engine 2.2
 
-Motor web para crear overlays transparentes de cámara y usarlos en TikTok LIVE Studio u OBS.
+Motor independiente para crear overlays transparentes de cámara y usarlos en TikTok LIVE Studio, OBS u otra fuente de navegador.
 
-## Archivos
+Archivos
 
-- `index.html`: editor.
-- `live.html`: visor transparente para el live.
-- `overlay.json`: configuración que carga el visor.
+index.html: editor visual.
 
-## Uso
+live.html: visor transparente para la fuente web.
 
-1. Sube los tres archivos a un repositorio de GitHub Pages.
-2. Abre `index.html` y crea tu overlay.
-3. Presiona **Exportar overlay.json**.
-4. Reemplaza el archivo `overlay.json` del repositorio por el nuevo.
-5. En la fuente de navegador de tu programa de live usa:
+overlay.json: proyecto publicado.
 
-```text
+URL del overlay
+
+El editor vuelve a mostrar la URL calculada automáticamente. La estructura es:
+
 https://TU-USUARIO.github.io/TU-REPOSITORIO/live.html?config=overlay.json
-```
 
-6. Configura la fuente con el mismo tamaño del proyecto, por ejemplo `1080 × 1920`.
+Después de editar, descarga el JSON y reemplaza overlay.json en GitHub. La URL no cambia.
 
-## Vista local
+Cambios de la versión 2.2
 
-El botón **Vista en vivo** abre una previsualización usando el proyecto guardado en el navegador.
+Recupera el campo y botón para copiar la URL del overlay.
 
-## Transparencia
+Glow de imágenes basado en la transparencia real de la imagen.
 
-La cuadrícula solo aparece en el editor. `live.html` mantiene el fondo completamente transparente.
+Al quitar verde, azul, negro o un color personalizado, el glow sigue el contorno resultante en lugar del rectángulo completo.
+
+Controles de intensidad y expansión del glow para imágenes.
+
+Glow animado entre dos colores.
+
+Loop maestro de 15 segundos.
+
+Fuentes, partículas, presets, capas y reemplazo de imágenes.
+
+Publicación en GitHub Pages
+
+Sube los tres archivos principales a la raíz del repositorio, activa Pages desde la rama main y la carpeta / (root), y abre el editor con la URL principal del repositorio.
